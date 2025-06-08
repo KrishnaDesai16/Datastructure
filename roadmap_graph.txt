@@ -1,0 +1,6 @@
+1. BFS and DFS → 6–8 problems
+2. Shortest Path (BFS, Dijkstra) → 4–6 problems
+3. Cycle Detection & Topo Sort → 3–5 problems
+4. DSU / Union-Find → 3–4 problems
+5. MST (Kruskal, Prim) → 3 problems
+6. Advanced (Tarjan, SCCs) → Optional
