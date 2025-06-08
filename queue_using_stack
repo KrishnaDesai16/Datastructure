@@ -1,0 +1,47 @@
+class QueueUsingStacks:
+    def __init__(self):
+        self.stack1 = []  # for enqueue
+        self.stack2 = []  # for dequeue
+
+    def enqueue(self, item):
+        self.stack1.append(item)
+
+    def dequeue(self):
+        if not self.stack2:
+            if not self.stack1:
+                print("Underflow: Queue is empty")
+                return None
+            # Move all items from stack1 to stack2
+            while self.stack1:
+                self.stack2.append(self.stack1.pop())
+        return self.stack2.pop()
+
+    def peek(self):
+        if not self.stack2:
+            while self.stack1:
+                self.stack2.append(self.stack1.pop())
+        if self.stack2:
+            #top of the stack
+            return self.stack2[-1]
+        return None
+
+    def is_empty(self):
+        return not self.stack1 and not self.stack2
+
+    def print_queue(self):
+        combined = self.stack2[::-1] + self.stack1
+        print("Queue (front → rear):", combined)
+
+
+
+s= Queue(3)
+s.enqueue(1)
+s.enqueue(3)
+s.enqueue(5)
+s.dqueue()
+s.enqueue(45)
+s.peek()
+s.print_stack()
+
+
+
